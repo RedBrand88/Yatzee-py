@@ -11,8 +11,9 @@ class Die:
 
         self.sides = sides
 
-    def roll(self):
-        return random.randint(1, self.sides)
+    def __str__(self) -> str:
+        if self.face is not None:
+            return str(self.face)
 
-    def getFace(self):
-        return self.face
+    def roll(self):
+        self.face = random.randint(1, self.sides)
