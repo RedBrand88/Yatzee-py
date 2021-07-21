@@ -21,4 +21,7 @@ class Score:
         return self.th_of_a_kind + self.fo_of_a_kind + self.full_house + self.sm_straight + self.lg_straight + self.yatzee + self.chance
 
     def grand_total(self):
-        return self.top_total() + self.bottom_total()
+        if self.top_total() == 0 and self.bottom_total() == 0:
+            return 0
+        else:
+            return self.top_total() + self.bottom_total()

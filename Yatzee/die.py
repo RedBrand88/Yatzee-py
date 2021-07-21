@@ -17,3 +17,6 @@ class Die:
 
     def roll(self):
         self.face = random.randint(1, self.sides)
+
+    def get_face(self):
+        return self.face

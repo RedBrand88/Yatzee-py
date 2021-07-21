@@ -15,3 +15,12 @@ class Hand:
     def roll_hand(self):
         for die in self.hand:
             die.roll()
+
+    def count(self, target: int):
+        return self.get_hand().count(target)
+
+    def get_hand(self):
+        return [die.get_face() for die in self.hand]
+
+    def sum(self):
+        return sum(self.get_hand())
