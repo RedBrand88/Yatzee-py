@@ -6,9 +6,9 @@ def main():
     hand = Hand()
     hand.roll_hand()
     score = Score()
-    game = Console_Game(score)
-    game.draw_hand(hand.hand)
-    game.draw_score_sheet()
+    view = Console_Game(score)
+    view.draw_hand(hand.hand)
+    view.draw_score_sheet()
 
 
 if __name__ == "__main__":
